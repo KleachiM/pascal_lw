@@ -1,0 +1,3 @@
+VAR
+  C(h: CHAR;
+BEGIN WRITELN ; END.

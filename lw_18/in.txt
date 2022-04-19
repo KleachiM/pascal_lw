@@ -1,0 +1,5 @@
+ivanov 1 2 3 4
+petrov 2 3 5 5
+kalinin 5 2 1 5
+sidorov 3 4 4 5
+smirnov 1 1 2 1

@@ -1,0 +1,132 @@
+PROGRAM Counter(INPUT, OUTPUT);
+VAR
+  Ch, CntUnit, CntDec, CntHundr: CHAR;
+BEGIN
+  READ(Ch);
+  CntUnit := '0';
+  CntDec := '0';
+  CntHundr := '0';
+  WHILE Ch <> '#'
+  DO
+    BEGIN
+      READ(Ch);
+      IF ORD(Ch) = 13
+      THEN
+        BEGIN
+          CntUnit := 'A';
+          CntDec := 'A';
+          CntHundr := 'A'
+        END;
+      IF CntUnit < '9'
+      THEN
+        BEGIN
+          IF CntUnit = '8'
+          THEN
+            CntUnit := '9';
+          IF CntUnit = '7'
+          THEN
+            CntUnit := '8';
+          IF CntUnit = '6'
+          THEN
+            CntUnit := '7';
+          IF CntUnit = '5'
+          THEN
+            CntUnit := '6';
+          IF CntUnit = '4'
+          THEN
+            CntUnit := '5';
+          IF CntUnit = '3'
+          THEN
+            CntUnit := '4';
+          IF CntUnit = '2'
+          THEN
+            CntUnit := '3';
+          IF CntUnit = '1'
+          THEN
+            CntUnit := '2';
+          IF CntUnit = '0'
+          THEN
+            CntUnit := '1'
+        END
+      ELSE
+        BEGIN
+          CntUnit := '0';
+          IF CntDec < '9'
+          THEN
+            BEGIN
+              IF CntDec = '8'
+              THEN
+                CntDec := '9';
+              IF CntDec = '7'
+              THEN
+                CntDec := '8';
+              IF CntDec = '6'
+              THEN
+                CntDec := '7';
+              IF CntDec = '5'
+              THEN
+                CntDec := '6';
+              IF CntDec = '4'
+              THEN
+                CntDec := '5';
+              IF CntDec = '3'
+              THEN
+                CntDec := '4';
+              IF CntDec = '2'
+              THEN
+                CntDec := '3';
+              IF CntDec = '1'
+              THEN
+                CntDec := '2';
+              IF CntDec = '0'
+              THEN
+                CntDec := '1'
+            END
+          ELSE
+            BEGIN
+              CntDec := '0';
+              IF CntHundr <= '9'
+              THEN
+                BEGIN
+                  IF CntHundr = '9'
+                  THEN
+                    CntHundr := 'A';
+                  IF CntHundr = '8'
+                  THEN
+                    CntHundr := '9';
+                  IF CntHundr = '7'
+                  THEN
+                    CntHundr := '8';
+                  IF CntHundr = '6'
+                  THEN
+                    CntHundr := '7';
+                  IF CntHundr = '5'
+                  THEN
+                    CntHundr := '6';
+                  IF CntHundr = '4'
+                  THEN
+                    CntHundr := '5';
+                  IF CntHundr = '3'
+                  THEN
+                    CntHundr := '4';
+                  IF CntHundr = '2'
+                  THEN
+                    CntHundr := '3';
+                  IF CntHundr = '1'
+                  THEN
+                    CntHundr := '2';
+                  IF CntHundr = '0'
+                  THEN
+                    CntHundr := '1'
+                END
+              ELSE
+                Ch := '#';
+            END;
+        END;
+    END;
+  IF CntHundr = 'A'
+  THEN
+    WRITELN('Overflow')
+  ELSE
+    WRITELN('Count of characters is: ', CntHundr, CntDec, CntUnit)
+END.

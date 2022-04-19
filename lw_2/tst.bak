@@ -1,0 +1,13 @@
+PROGRAM Max3(INPUT, OUTPUT);
+VAR
+  Ch: CHAR;
+BEGIN
+  READ(Ch);
+  WRITELN(Ch);
+  WHILE Ch <> '#'
+  DO
+    BEGIN
+      READ(Ch);
+      WRITELN(Ch);
+    END
+END.

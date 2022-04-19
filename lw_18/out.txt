@@ -1,0 +1,8 @@
+Student averages:
+ivanov 3
+petrov 4
+kalinin 3
+sidorov 4
+smirnov 1
+Class average:
+2.9
